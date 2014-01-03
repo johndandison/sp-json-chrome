@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "SharePoint JSON Viewer",
+  "description": "Easy way to get JSON in the browser from SharePoint _api calls.",
+  "version": "1.1",
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+	{
+		"matches": ["*://*.sharepoint.com/_api*"],
+		"css": ["printer.css"],
+		"js": ["jquery-1.9.1.min.js", "printer.js"]
+	}
+  ],
+  "permissions": [
+    "webRequest",
+	"webRequestBlocking",
+	"*://*.sharepoint.com/_api*"
+  ]
+}

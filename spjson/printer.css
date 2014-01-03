@@ -1,0 +1,9 @@
+pre {
+	font-family: "Consolas";
+	font-size: 0.75em;
+}
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
